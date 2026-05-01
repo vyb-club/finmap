@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoneyMap Learning Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero" id="top">
+    <nav class="nav container">
+      <a class="brand" href="#top">MoneyMap</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#roadmap">Roadmap</a>
+        <a href="#terms">Key Terms</a>
+        <a href="#compare">Compare</a>
+        <a href="#calculator">Calculator</a>
+        <a href="#quiz">Quiz</a>
+      </div>
+    </nav>
+
+    <div class="hero-content container">
+      <div class="hero-copy">
+        <p class="eyebrow">Finance learning for beginners</p>
+        <h1>Understand investing and insurance without the jargon headache.</h1>
+        <p class="hero-text">
+          This beginner-friendly guide turns confusing financial terms into clear, practical ideas.
+          Explore investments, mutual funds, ETFs, insurance basics, and the hidden cost words people often skip.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#terms">Start Learning</a>
+          <a class="button secondary" href="#quiz">Test Yourself</a>
+        </div>
+        <ul class="hero-points">
+          <li>Simple explanations</li>
+          <li>Interactive topic filters</li>
+          <li>Static and ready for GitHub Pages</li>
+        </ul>
+      </div>
+
+      <div class="hero-panel">
+        <div class="panel-card">
+          <span class="panel-label">Quick Mental Model</span>
+          <h2>Your money choices usually answer 3 questions:</h2>
+          <div class="signal-grid">
+            <article>
+              <strong>Growth</strong>
+              <p>How much can this grow?</p>
+            </article>
+            <article>
+              <strong>Safety</strong>
+              <p>How much can this fall?</p>
+            </article>
+            <article>
+              <strong>Access</strong>
+              <p>How soon can you use the money?</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section roadmap" id="roadmap">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Step-by-step view</p>
+          <h2>A simple roadmap before you dive into terms</h2>
+          <p>Think of financial products as tools. Each tool serves a different need: wealth creation, income stability, protection, or flexibility.</p>
+        </div>
+
+        <div class="roadmap-grid">
+          <article class="roadmap-card">
+            <span>1</span>
+            <h3>Growth Tools</h3>
+            <p>Equity, equity funds, midcap, smallcap, flexicap, multicap, index funds, and ETFs are used when you want long-term growth.</p>
+          </article>
+          <article class="roadmap-card">
+            <span>2</span>
+            <h3>Stability Tools</h3>
+            <p>Debt, liquid funds, and corporate debt funds focus more on preserving capital and smoother returns than aggressive growth.</p>
+          </article>
+          <article class="roadmap-card">
+            <span>3</span>
+            <h3>Diversification Tools</h3>
+            <p>Commodities and REITs add exposure beyond shares and bonds, helping spread risk across different asset types.</p>
+          </article>
+          <article class="roadmap-card">
+            <span>4</span>
+            <h3>Protection Tools</h3>
+            <p>Health insurance, term insurance, and riders protect you from large financial shocks instead of trying to grow money.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section terms" id="terms">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Interactive glossary</p>
+          <h2>Learn the terms, sorted by topic</h2>
+          <p>Use the filters to focus on one area at a time. Click any card to reveal the plain-English explanation.</p>
+        </div>
+
+        <div class="toolbar">
+          <div class="filter-group" role="group" aria-label="Filter terms">
+            <button class="filter-button active" data-filter="all">All</button>
+            <button class="filter-button" data-filter="investment">Investments</button>
+            <button class="filter-button" data-filter="funds">Funds</button>
+            <button class="filter-button" data-filter="insurance">Insurance</button>
+            <button class="filter-button" data-filter="costs">Costs & Rules</button>
+          </div>
+          <label class="search-box">
+            <span class="sr-only">Search terms</span>
+            <input type="search" id="termSearch" placeholder="Search a term like ETF or expense ratio">
+          </label>
+        </div>
+
+        <div class="cards-grid" id="termGrid">
+          <article class="term-card" data-category="investment" data-title="equity">
+            <button class="term-trigger" aria-expanded="false">
+              <span class="term-badge">Investment</span>
+              <h3>Equity</h3>
+              <p>Owning a small part of a company.</p>
+            </button>
+            <div class="term-body">
+              <p>When you buy equity, you become a part-owner of a business. If the company does well, your investment may grow. If it performs badly, the value can fall.</p>
+            </div>
+          </article>
+
+          <article class="term-card" data-category="investment" data-title="debt">
+            <button class="term-trigger" aria-expanded="false">
+              <span class="term-badge">Investment</span>
+              <h3>Debt</h3>
+              <p>Lending money in exchange for interest.</p>
+            </button>
+            <div class="term-body">
+              <p>Debt investments work like you giving a loan to a government or company. In return, they usually pay interest and are generally less volatile than equity.</p>
+            </div>
+          </article>
+
+          <article class="term-card" data-category="investment" data-title="commodities">
+            <button class="term-trigger" aria-expanded="false">
+              <span class="term-badge">Investment</span>
+              <h3>Commodities</h3>
+              <p>Investing in raw materials like gold or oil.</p>
+            </button>
+            <div class="term-body">
+              <p>Commodities are physical goods used in the economy. People invest in them to diversify, hedge inflation, or benefit when prices of those goods rise.</p>
+            </div>
+          </article>
+
+          <article class="term-card" data-category="investment" data-title="reits">
+            <button class="term-trigger" aria-expanded="false">
+              <span class="term-badge">Investment</span>
+              <h3>REITs</h3>
+              <p>Real estate investing without buying property yourself.</p>
+            </button>
+            <div class="term-body">
+              <p>REIT stands for Real Estate Investment Trust. It pools money into income-generating properties such as offices, malls, or warehouses, letting investors access real estate more easily.</p>
+            </div>
+          </article>
+
+          <article class="term-card" data-category="funds" data-title="index funds">
+            <button class="term-trigger" aria-expanded="false">
+              <span class="term-badge">Fund</span>
+              <h3>Index Funds</h3>
+              <p>Funds that copy a market index.</p>
+            </button>
+            <div class="term-body">
+              <p>An index fund does not try to beat the market. It simply tracks an index such as Nifty 50 or Sensex by investing in the same companies in similar proportions.</p>
+            </div>
+          </article>
+
+          <article class="term-card" data-category="funds" data-title="midcap funds">
+            <button class="term-trigger" aria-expanded="false">
+              <span class="term-badge">Fund</span>
+              <h3>Midcap Funds</h3>
+              <p>Funds investing in medium-sized companies.</p>
+            </button>
+            <div class="term-body">
+              <p>Midcap funds invest in companies that are larger than small businesses but not as big as market leaders. They can offer good growth potential with moderate-to-high risk.</p>
+            </div>
+          </article>
+
+          <article class="term-card" data-category="funds" data-title="smallcap funds">
+            <button class="term-trigger" aria-expanded="false">
+              <span class="term-badge">Fund</span>
+              <h3>Smallcap Funds</h3>
+              <p>Funds focused on smaller companies.</p>
+            </button>
+            <div class="term-body">
+              <p>Smallcap funds invest in relatively small listed companies. These may grow quickly, but prices also swing more sharply, so risk is usually higher.</p>
+            </div>
+          </article>
+
+          <article class="term-card" data-category="funds" data-title="flexicap funds">
+            <button class="term-trigger" aria-expanded="false">
+              <span class="term-badge">Fund</span>
+              <h3>Flexicap Funds</h3>
+              <p>Funds that can move across company sizes.</p>
+            </button>
+            <div class="term-body">
+              <p>Flexicap funds can invest in large-cap, midcap, and smallcap stocks depending on where the fund manager sees opportunities. This gives the manager flexibility.</p>
+            </div>
+          </article>
+
+          <article class="term-card" data-category="funds" data-title="multicap funds">
+            <button class="term-trigger" aria-expanded="false">
+              <span class="term-badge">Fund</span>
+              <h3>Multicap Funds</h3>
+              <p>Funds spread across large, mid, and small companies.</p>
+            </button>
+            <div class="term-body">
+              <p>Multicap funds diversify across company sizes by design. Unlike flexicap funds, they usually follow minimum allocation rules to each cap category.</p>
+            </div>
+          </article>
+
+          <article class="term-card" data-category="funds" data-title="liquid funds">
+            <button class="term-trigger" aria-expanded="false">
+              <span class="term-badge">Fund</span>
+              <h3>Liquid Funds</h3>
+              <p>Low-risk funds for short-term parking of money.</p>
+            </button>
+            <div class="term-body">
+              <p>Liquid funds invest in very short-term debt instruments. They are often used for emergency money or temporary parking because they aim for stability and easy access.</p>
+            </div>
+          </article>
+
+          <article class="term-card" data-category="funds" data-title="corporate debt funds">
+            <button class="term-trigger" aria-expanded="false">
+              <span class="term-badge">Fund</span>
+              <h3>Corporate Debt Funds</h3>
+              <p>Debt funds that lend mainly to companies.</p>
+            </button>
+            <div class="term-body">
+              <p>These funds invest mostly in bonds issued by companies. They usually aim to offer better returns than very short-term options, while taking credit risk and interest-rate risk.</p>
+            </div>
+          </article>
+
+          <article class="term-card" data-category="funds" data-title="etf">
+            <button class="term-trigger" aria-expanded="false">
+              <span class="term-badge">Fund</span>
+              <h3>ETF</h3>
+              <p>A fund traded on the stock exchange like a share.</p>
+            </button>
+            <div class="term-body">
+              <p>ETF stands for Exchange Traded Fund. It can track an index, sector, commodity, or bond basket, and you buy or sell it on the market during trading hours.</p>
+            </div>
+          </article>
+
+          <article class="term-card" data-category="insurance" data-title="health insurance">
+            <button class="term-trigger" aria-expanded="false">
+              <span class="term-badge">Insurance</span>
+              <h3>Health Insurance</h3>
+              <p>Cover for medical expenses.</p>
+            </button>
+            <div class="term-body">
+              <p>Health insurance helps pay for hospitalization, treatments, and certain medical costs. It protects your savings from being wiped out by a large health emergency.</p>
+            </div>
+          </article>
+
+          <article class="term-card" data-category="insurance" data-title="term insurance">
+            <button class="term-trigger" aria-expanded="false">
+              <span class="term-badge">Insurance</span>
+              <h3>Term Insurance</h3>
+              <p>Pure life cover for your family.</p>
+            </button>
+            <div class="term-body">
+              <p>Term insurance pays a fixed amount to your nominee if you die during the policy term. It is meant for protection, not investment or returns.</p>
+            </div>
+          </article>
+
+          <article class="term-card" data-category="insurance" data-title="riders">
+            <button class="term-trigger" aria-expanded="false">
+              <span class="term-badge">Insurance</span>
+              <h3>Riders</h3>
+              <p>Optional add-ons that expand insurance cover.</p>
+            </button>
+            <div class="term-body">
+              <p>Riders are extra benefits added to an insurance policy, such as critical illness cover, accidental death cover, or waiver of premium. They usually cost extra.</p>
+            </div>
+          </article>
+
+          <article class="term-card" data-category="costs" data-title="lock-in period">
+            <button class="term-trigger" aria-expanded="false">
+              <span class="term-badge">Rule</span>
+              <h3>Lock-in Period</h3>
+              <p>A time during which money cannot be withdrawn freely.</p>
+            </button>
+            <div class="term-body">
+              <p>A lock-in period forces you to stay invested for a minimum time. It helps long-term discipline, but reduces flexibility because you cannot access the money easily.</p>
+            </div>
+          </article>
+
+          <article class="term-card" data-category="costs" data-title="exit load">
+            <button class="term-trigger" aria-expanded="false">
+              <span class="term-badge">Cost</span>
+              <h3>Exit Load</h3>
+              <p>A fee for leaving a fund too early.</p>
+            </button>
+            <div class="term-body">
+              <p>Some mutual funds charge exit load if you redeem units before a specified period. It discourages short-term entry and exit by investors.</p>
+            </div>
+          </article>
+
+          <article class="term-card" data-category="costs" data-title="expense ratio">
+            <button class="term-trigger" aria-expanded="false">
+              <span class="term-badge">Cost</span>
+              <h3>Expense Ratio</h3>
+              <p>The annual fee charged by a fund.</p>
+            </button>
+            <div class="term-body">
+              <p>The expense ratio covers fund management and operating costs. It is deducted from the fund’s assets, so a higher ratio can reduce your long-term returns.</p>
+            </div>
+          </article>
+
+          <article class="term-card" data-category="costs" data-title="aum">
+            <button class="term-trigger" aria-expanded="false">
+              <span class="term-badge">Scale</span>
+              <h3>AUM</h3>
+              <p>Total money managed by a fund.</p>
+            </button>
+            <div class="term-body">
+              <p>AUM stands for Assets Under Management. It shows the total value of money a fund or asset manager is handling on behalf of investors.</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="empty-state hidden" id="emptyState">No terms match that filter or search. Try another keyword.</p>
+      </div>
+    </section>
+
+    <section class="section compare" id="compare">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Quick comparison</p>
+          <h2>How these products differ</h2>
+          <p>This table gives you the first-level intuition a beginner usually needs.</p>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Main Goal</th>
+                <th>Typical Risk</th>
+                <th>Best Use</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Equity / Equity Funds</td>
+                <td>Growth</td>
+                <td>High</td>
+                <td>Long-term wealth creation</td>
+              </tr>
+              <tr>
+                <td>Debt / Debt Funds</td>
+                <td>Stability</td>
+                <td>Low to Moderate</td>
+                <td>Safer allocation, shorter goals</td>
+              </tr>
+              <tr>
+                <td>Commodities</td>
+                <td>Diversification</td>
+                <td>Moderate to High</td>
+                <td>Inflation hedge, portfolio balance</td>
+              </tr>
+              <tr>
+                <td>REITs</td>
+                <td>Income + Diversification</td>
+                <td>Moderate</td>
+                <td>Real estate exposure without property purchase</td>
+              </tr>
+              <tr>
+                <td>Health Insurance</td>
+                <td>Protection</td>
+                <td>Not an investment</td>
+                <td>Medical emergency cover</td>
+              </tr>
+              <tr>
+                <td>Term Insurance</td>
+                <td>Protection</td>
+                <td>Not an investment</td>
+                <td>Family income protection</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section calculator" id="calculator">
+      <div class="container calculator-layout">
+        <div>
+          <div class="section-heading left">
+            <p class="eyebrow">Make costs visible</p>
+            <h2>Expense ratio impact calculator</h2>
+            <p>Beginners often ignore fees because they look small. This tool shows how a higher expense ratio can reduce your final value over time.</p>
+          </div>
+
+          <form class="calculator-form" id="costForm">
+            <label>
+              Initial investment
+              <input type="number" id="investment" min="1000" step="1000" value="100000">
+            </label>
+            <label>
+              Expected annual return (%)
+              <input type="number" id="returnRate" min="1" max="30" step="0.1" value="12">
+            </label>
+            <label>
+              Years invested
+              <input type="number" id="years" min="1" max="40" step="1" value="10">
+            </label>
+            <label>
+              Expense ratio (%)
+              <input type="number" id="expenseRatio" min="0" max="5" step="0.01" value="1.2">
+            </label>
+            <button class="button primary" type="submit">Calculate</button>
+          </form>
+        </div>
+
+        <div class="result-card" id="calcResult">
+          <span class="result-label">Estimated outcome</span>
+          <h3 id="netValue">₹0</h3>
+          <p id="calcSummary">Enter values and calculate to see the long-term effect of fund costs.</p>
+          <div class="metric-strip">
+            <div>
+              <small>Without fee</small>
+              <strong id="grossValue">₹0</strong>
+            </div>
+            <div>
+              <small>Approx. cost effect</small>
+              <strong id="costValue">₹0</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quiz" id="quiz">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Knowledge check</p>
+          <h2>Mini quiz for better clarity</h2>
+          <p>Answer a few quick questions and get instant feedback.</p>
+        </div>
+
+        <div class="quiz-card" id="quizCard"></div>
+        <div class="quiz-actions">
+          <button class="button primary" id="checkQuiz">Check Answers</button>
+          <button class="button secondary" id="resetQuiz">Reset</button>
+        </div>
+        <p class="quiz-result" id="quizResult"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <h2>MoneyMap</h2>
+        <p>A static learning website designed to make finance terms easier for first-time learners.</p>
+      </div>
+      <a href="#top" class="back-top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
